@@ -17,7 +17,7 @@
 
 ## 快速开始
 
-打开`./Samples/ConnectViaCode`场景，在场景中的`ConnectViaCode`脚本中填入您的key与secret以及对应的项目Id。
+打开`./Assets/OpenBLive/Samples/ConnectViaCode`场景，在场景中的`ConnectViaCode`脚本中填入您的key与secret以及对应的项目Id。
 
 ![image](https://github.com/user-attachments/assets/ff3b782c-f4eb-4a80-8560-74bc0c690f0b)
 
