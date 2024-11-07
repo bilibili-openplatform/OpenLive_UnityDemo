@@ -1,0 +1,16 @@
+{
+    "name": "OpenBLive.Samples.Script",
+    "rootNamespace": "",
+    "references": [
+        "GUID:aad39dd3dbbabc740941e057e6cef811"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
