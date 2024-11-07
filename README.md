@@ -19,8 +19,10 @@
 
 打开`./Samples/ConnectViaCode`场景，在场景中的`ConnectViaCode`脚本中填入您的key与secret以及对应的项目Id。
 
-![sample.png](https://i0.hdslb.com/bfs/activity-plat/static/20230506/cc51945399520f91bb65629803b43743/unitySDK1.png)
+![image](https://github.com/user-attachments/assets/ff3b782c-f4eb-4a80-8560-74bc0c690f0b)
+
 
 填写后运行_Demo中的示例开启游戏
 
-![mockdata.gif](https://i0.hdslb.com/bfs/activity-plat/static/20230506/cc51945399520f91bb65629803b43743/unitySDK2.png)
+![image](https://github.com/user-attachments/assets/73f72f98-a569-46a7-831f-7e6faa122671)
+
