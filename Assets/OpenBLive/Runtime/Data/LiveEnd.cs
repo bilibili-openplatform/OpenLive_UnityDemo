@@ -24,5 +24,15 @@ namespace OpenBLive.Runtime.Data
         /// 发生的直播间
         /// </summary>
         [JsonProperty("room_id")] public long room_id;
+
+        /// <summary>
+        /// 开播时的标题
+        /// </summary>
+        [JsonProperty("title")] public string title;
+
+        /// <summary>
+        /// 开播的分区ID
+        /// </summary>
+        [JsonProperty("area_id")] public long area_id;
     }
 }

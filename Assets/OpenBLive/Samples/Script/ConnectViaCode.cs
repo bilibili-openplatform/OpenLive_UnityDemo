@@ -93,13 +93,13 @@ public class ConnectViaCode : MonoBehaviour
     }
     private static void M_WebSocketBLiveClient_OnLiveEnd(LiveEnd liveEnd)
     {
-        StringBuilder sb = new StringBuilder($"直播间[{liveEnd.room_id}]直播结束");
+        StringBuilder sb = new StringBuilder($"直播间[{liveEnd.room_id}]直播结束，分区ID：【{liveEnd.area_id}】,标题为【{liveEnd.title}】");
         Logger.Log(sb.ToString());
     }
 
     private static void M_WebSocketBLiveClient_OnLiveStart(LiveStart liveStart)
     {
-        StringBuilder sb = new StringBuilder($"直播间[{liveStart.room_id}]开始直播");
+        StringBuilder sb = new StringBuilder($"直播间[{liveStart.room_id}]开始直播，分区ID：【{liveStart.area_id}】,标题为【{liveStart.title}】");
         Logger.Log(sb.ToString());
     }
 
