@@ -57,6 +57,7 @@ public class ConnectViaCode : MonoBehaviour
         m_WebSocketBLiveClient.OnGift += WebSocketBLiveClientOnGift;
         m_WebSocketBLiveClient.OnGuardBuy += WebSocketBLiveClientOnGuardBuy;
         m_WebSocketBLiveClient.OnSuperChat += WebSocketBLiveClientOnSuperChat;
+        m_WebSocketBLiveClient.OnLike += M_WebSocketBLiveClient_OnLike;
         m_WebSocketBLiveClient.OnEnter += M_WebSocketBLiveClient_OnEnter;
         m_WebSocketBLiveClient.OnLiveStart += M_WebSocketBLiveClient_OnLiveStart;
         m_WebSocketBLiveClient.OnLiveEnd += M_WebSocketBLiveClient_OnLiveEnd;
