@@ -1235,7 +1235,7 @@ MonoBehaviour:
   IdCodeSaveKey: IdCode
   IdCode: 
   IdCodeInputField: {fileID: 1092014593984902286}
-  HyperLinkUrl: https://link.bilibili.com/p/center/index#/my-room/start-live
+  HyperLinkUrl: https://play-live.bilibili.com/
   HyperLinkText: {fileID: 1092014593779218300}
   StartToPlayButton: {fileID: 1092014594796874151}
   CloseButton: {fileID: 1092014593852680245}
