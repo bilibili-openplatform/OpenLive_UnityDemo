@@ -123,7 +123,7 @@ public class ConnectViaCode : MonoBehaviour
 
     private static void WebSocketBLiveClientOnGuardBuy(Guard guard)
     {
-        StringBuilder sb = new StringBuilder($"用户[{guard.userInfo.userName}]充值了{guard.guardNum}个月[{(guard.guardLevel == 1 ? "总督" : guard.guardLevel == 2 ? "提督" : "舰长")}]大航海");
+        StringBuilder sb = new StringBuilder($"用户[{guard.userInfo.userName}]充值了{(guard.guardUnit=="月"?(guard.guardNum+"个月"):guard.guardUnit.TrimStart('*'))}[{(guard.guardLevel==1?"总督":guard.guardLevel==2?"提督":"舰长")}]大航海");
         Logger.Log(sb.ToString());
     }
 
