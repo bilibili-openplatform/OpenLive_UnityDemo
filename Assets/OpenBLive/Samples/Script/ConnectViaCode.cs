@@ -51,16 +51,16 @@ public class ConnectViaCode : MonoBehaviour
             ConnectFailure?.Invoke();
             return;
         }
-
+        //长链接（用户持续接收服务器推送消息）
         m_WebSocketBLiveClient = new WebSocketBLiveClient(gameIdResObj.GetWssLink(), gameIdResObj.GetAuthBody());
-        m_WebSocketBLiveClient.OnDanmaku += WebSocketBLiveClientOnDanmaku;
-        m_WebSocketBLiveClient.OnGift += WebSocketBLiveClientOnGift;
-        m_WebSocketBLiveClient.OnGuardBuy += WebSocketBLiveClientOnGuardBuy;
-        m_WebSocketBLiveClient.OnSuperChat += WebSocketBLiveClientOnSuperChat;
-        m_WebSocketBLiveClient.OnLike += M_WebSocketBLiveClient_OnLike;
-        m_WebSocketBLiveClient.OnEnter += M_WebSocketBLiveClient_OnEnter;
-        m_WebSocketBLiveClient.OnLiveStart += M_WebSocketBLiveClient_OnLiveStart;
-        m_WebSocketBLiveClient.OnLiveEnd += M_WebSocketBLiveClient_OnLiveEnd;
+        m_WebSocketBLiveClient.OnDanmaku += WebSocketBLiveClientOnDanmaku;//弹幕事件
+        m_WebSocketBLiveClient.OnGift += WebSocketBLiveClientOnGift;//礼物事件
+        m_WebSocketBLiveClient.OnGuardBuy += WebSocketBLiveClientOnGuardBuy;//大航海事件
+        m_WebSocketBLiveClient.OnSuperChat += WebSocketBLiveClientOnSuperChat;//SC事件
+        m_WebSocketBLiveClient.OnLike += M_WebSocketBLiveClient_OnLike;//点赞事件(点赞需要直播间开播才会触发推送)
+        m_WebSocketBLiveClient.OnEnter += M_WebSocketBLiveClient_OnEnter;//观众进入房间事件
+        m_WebSocketBLiveClient.OnLiveStart += M_WebSocketBLiveClient_OnLiveStart;//直播间开始直播事件
+        m_WebSocketBLiveClient.OnLiveEnd += M_WebSocketBLiveClient_OnLiveEnd;//直播间停止直播事件
 
         try
         {
@@ -76,6 +76,8 @@ public class ConnectViaCode : MonoBehaviour
         }
 
         gameId = gameIdResObj.GetGameId();
+
+        //心跳API（用于保持在线）
         m_PlayHeartBeat = new InteractivePlayHeartBeat(gameId);
         m_PlayHeartBeat.HeartBeatError += M_PlayHeartBeat_HeartBeatError;
         m_PlayHeartBeat.HeartBeatSucceed += M_PlayHeartBeat_HeartBeatSucceed;
